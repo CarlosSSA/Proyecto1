@@ -4,13 +4,16 @@
 
 {% block content %}
   {{pollas}}
-  {% for polla in pollas %}
+  {% for elemento in elementos %}
     <p>Título</p>
-    <h1>{{ polla.title }}</h1>
+    <h1>{{ elemento.title }}</h1>
     <p>Imagen</p>
-    <img src="{{ polla.imagen }}" alt="wat?">
+    <img src="{{ elemento.image.url }}" alt="wat?">
     <p>Descripción</p>
-    <h1>{{ polla.description }}</h1>
+    <h1>{{ elemento.description }}</h1>
+    {% if elemento.link %}
+    <a href="{{elemento.link}}">Saber Más</a>
+    {% endif %}
   {% endfor %}
   <h1>Que pasa Socio, esto es el PORTFOLIO</h1>
   <h2>To flama!</h2>
