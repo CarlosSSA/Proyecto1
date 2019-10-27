@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+  {{pollas}}
+  {% for polla in pollas %}
+    <p>Título</p>
+    <h1>{{ polla.title }}</h1>
+    <p>Imagen</p>
+    <img src="{{ polla.imagen }}" alt="wat?">
+    <p>Descripción</p>
+    <h1>{{ polla.description }}</h1>
+  {% endfor %}
+  <h1>Que pasa Socio, esto es el PORTFOLIO</h1>
+  <h2>To flama!</h2>
+{% endblock %}
